@@ -40,6 +40,14 @@
 	color = "#808080" // rgb: 128, 128, 128
 	taste_mult = 0
 
+/datum/reagent/oxygen
+	name = "Luminol"
+	id = "luminol"
+	description = "A glowing liquid."
+	reagent_state = LIQUID
+	color = "#ffffff" // rgb: 255, 255, 255
+	taste_mult = 0
+
 /datum/reagent/nitrogen
 	name = "Nitrogen"
 	id = "nitrogen"
