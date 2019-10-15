@@ -7,13 +7,21 @@
 	required_reagents = list("fluorine" = 2, "carbon" = 2, "sacid" = 1)
 	result_amount = 5
 	mix_message = "A head of foam results from the mixture's constant fizzing."
-
+	
 /datum/chemical_reaction/foam
 	name = "Foam"
 	id = "foam"
 	result = null
 	required_reagents = list("fluorosurfactant" = 1, "water" = 1)
 	result_amount = 2
+
+/datum/chemical_reaction/luminol
+	name = "Luminol Flash"
+	id = "luminol flash"
+	result = "luminol"
+	required_reagents = list("oxygen" = 2, "carbon" = 2)
+	result_amount = 5
+	mix_message = "A bright light eminates from the mixture."
 
 /datum/chemical_reaction/foam/on_reaction(datum/reagents/holder, created_volume)
 	var/location = get_turf(holder.my_atom)
