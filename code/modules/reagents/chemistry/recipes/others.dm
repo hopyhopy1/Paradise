@@ -15,14 +15,6 @@
 	required_reagents = list("fluorosurfactant" = 1, "water" = 1)
 	result_amount = 2
 
-/datum/chemical_reaction/glow_fluid
-	name = "Glow Fluid Flash"
-	id = "glow _fluid_flash"
-	result = "glow_fluid"
-	required_reagents = list("oxygen" = 2, "carbon" = 2)
-	result_amount = 5
-	mix_message = "A bright light eminates from the mixture."
-
 /datum/chemical_reaction/foam/on_reaction(datum/reagents/holder, created_volume)
 	var/location = get_turf(holder.my_atom)
 	holder.my_atom.visible_message("<span class='warning'>The solution spews out foam!</span>")
@@ -31,6 +23,20 @@
 	s.set_up(created_volume, location, holder, 0)
 	s.start()
 	holder.clear_reagents()
+	
+/datum/chemical_reaction/glow_fluid
+	name = "Glow Fluid Flash"
+	id = "glow _fluid_flash"
+	result = "glow_fluid"
+	required_reagents = list("oxygen" = 2, "carbon" = 2)
+	result_amount = 5
+	mix_message = "A bright light eminates from the mixture."
+	
+/datum/chemical_reaction/glow_fluid/on_reaction(datum/reagents/holder)
+	var/location = get_turf(holder.my_atom)
+	if(!location)
+		return
+	bang(location, holder.my_atom, 2, flash = TRUE, bang = FALSE)
 
 
 /datum/chemical_reaction/metalfoam
