@@ -49,11 +49,8 @@
 	taste_mult = 0
 	set_light(2)
 	
-/datum/reagent/glow_fluid/reaction_turf(var/O, volume)
-	var/r = (volume / 100) + 1
-	var/g = (volume / 70) + 1
-	var/b = (volume / 50) + 1
-	I.SetIntensity(r,g,b)
+/datum/reagent/glow_fluid/reaction_turf(var/O, color)
+	I.SetIntensity(color)
 	O.icon = I
 	O:silicateIcon = I
 
