@@ -15,10 +15,10 @@
 	required_reagents = list("fluorosurfactant" = 1, "water" = 1)
 	result_amount = 2
 
-/datum/chemical_reaction/luminol
-	name = "Luminol Glow"
-	id = "luminol glow"
-	result = "luminol"
+/datum/chemical_reaction/glow_fluid
+	name = "Glow Fluid Flash"
+	id = "glow _fluid_flash"
+	result = "glow_fluid"
 	required_reagents = list("oxygen" = 2, "carbon" = 2)
 	result_amount = 5
 	mix_message = "A bright light eminates from the mixture."
