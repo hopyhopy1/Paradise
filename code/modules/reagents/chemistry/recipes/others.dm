@@ -16,8 +16,8 @@
 	result_amount = 2
 
 /datum/chemical_reaction/luminol
-	name = "Luminol Flash"
-	id = "luminol flash"
+	name = "Luminol Glow"
+	id = "luminol glow"
 	result = "luminol"
 	required_reagents = list("oxygen" = 2, "carbon" = 2)
 	result_amount = 5
