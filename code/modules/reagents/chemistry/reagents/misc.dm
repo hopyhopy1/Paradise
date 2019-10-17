@@ -39,7 +39,7 @@
 	reagent_state = GAS
 	color = "#808080" // rgb: 128, 128, 128
 	taste_mult = 0
-
+	
 /datum/reagent/glow_fluid
 	name = "Glow Fluid"
 	id = "glow_fluid"
@@ -47,6 +47,15 @@
 	reagent_state = LIQUID
 	color = "#ffffff" // rgb: 255, 255, 255
 	taste_mult = 0
+	set_light(2)
+	
+/datum/reagent/glow_fluid/reactioyn_turf(var/O, volume)
+	var/r = (volume / 100) + 1
+	var/g = (volume / 70) + 1
+	var/b = (volume / 50) + 1
+	I.SetIntensity(r,g,b)
+	O.icon = I
+	O:silicateIcon = I
 
 /datum/reagent/nitrogen
 	name = "Nitrogen"
