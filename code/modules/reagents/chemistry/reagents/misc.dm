@@ -49,7 +49,7 @@
 	taste_mult = 0
 	set_light(2)
 	
-/datum/reagent/glow_fluid/reaction_turf(var/O, color)
+/datum/reagent/glow_fluid/reaction_obj(obj/O, color)
 	I.SetIntensity(color)
 	O.icon = I
 	O:silicateIcon = I
